@@ -1,6 +1,5 @@
 package br.edu.satc;
 
-/** Executa um exemplo de matrícula e conclusão de curso. */
 public class App {
     public static void main(String[] args) {
         Curso curso = new Curso(
@@ -19,5 +18,9 @@ public class App {
         matricula.concluirCurso();
         System.out.println("Após a conclusão: " + matricula.getStatus());
         System.out.println("Data da conclusão: " + matricula.getDataConclusao());
+
+        CriadorCertificado criadorCertificado = new CriadorCertificadoConclusao();
+        Certificado certificado = criadorCertificado.emitirCertificado(matricula);
+        System.out.println("Certificado emitido: " + certificado.formatar());
     }
 }

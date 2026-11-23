@@ -1,6 +1,5 @@
 package br.edu.satc;
 
-/** Aluno que pode se matricular em um curso. */
 public class Aluno {
     private final String nome;
     private final String email;

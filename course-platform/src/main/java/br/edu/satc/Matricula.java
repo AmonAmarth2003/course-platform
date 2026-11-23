@@ -3,7 +3,6 @@ package br.edu.satc;
 import java.time.LocalDate;
 import java.util.Objects;
 
-/** Vínculo entre um aluno e um curso, com seu estado de conclusão. */
 public class Matricula {
     public enum Status {
         EM_ANDAMENTO,
