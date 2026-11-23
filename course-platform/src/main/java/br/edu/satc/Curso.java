@@ -1,6 +1,5 @@
 package br.edu.satc;
 
-/** Curso disponível para matrícula. */
 public class Curso {
     private final String nome;
     private final String descricao;

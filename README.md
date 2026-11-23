@@ -48,12 +48,12 @@ As datas de matrícula e conclusão são exibidas no formato `AAAA-MM-DD`. A dat
 
 ## Patterns
 
-Os dois patterns definidos para o projeto são Factory Method e Observer. A implementação dos patterns está prevista nas contribuições listadas abaixo; na versão atual, o código contém as entidades e o fluxo básico, mas ainda não contém classes de fábrica, certificado ou observador.
+Os dois patterns definidos para o projeto são Factory Method e Observer. Nesta etapa, o Factory Method para emissão de certificados já está implementado; o Observer segue previsto para a próxima entrega.
 
 ### Factory Method — emissão de certificado
 
 - **Problema resolvido:** separar a emissão do certificado do fluxo de conclusão da matrícula e permitir incluir novos tipos de certificado na Parte 2 sem alterar esse fluxo.
-- **Classes previstas:** `Certificado` (produto), `CertificadoConclusao` (produto concreto), `CriadorCertificado` (criador com o factory method) e `CriadorCertificadoConclusao` (criador concreto).
+- **Classes implementadas:** `Certificado` (produto), `CertificadoConclusao` (produto concreto), `CriadorCertificado` (criador com o factory method `criarCertificado` e operação `emitirCertificado`) e `CriadorCertificadoConclusao` (criador concreto).
 
 ### Observer — notificação de conclusão
 
