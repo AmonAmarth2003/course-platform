@@ -20,4 +20,12 @@ class AlunoTest {
         assertThrows(IllegalArgumentException.class,
                 () -> new Aluno("Ana Souza", "ana@example.com", " "));
     }
+
+    @Test
+    void rejeitaNomeOuEmailVazio() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Aluno(" ", "ana@example.com", "+55 48 99999-1234"));
+        assertThrows(IllegalArgumentException.class,
+                () -> new Aluno("Ana Souza", null, "+55 48 99999-1234"));
+    }
 }

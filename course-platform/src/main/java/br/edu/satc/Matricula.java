@@ -1,6 +1,8 @@
 package br.edu.satc;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Matricula {
@@ -14,6 +16,7 @@ public class Matricula {
     private final LocalDate dataMatricula;
     private Status status;
     private LocalDate dataConclusao;
+    private final List<ObservadorMatricula> observadores = new ArrayList<>();
 
     public Matricula(Aluno aluno, Curso curso) {
         this.aluno = Objects.requireNonNull(aluno, "O aluno é obrigatório.");
@@ -42,10 +45,25 @@ public class Matricula {
         return dataConclusao;
     }
 
+    public void adicionarObservador(ObservadorMatricula observador) {
+        observadores.add(Objects.requireNonNull(observador, "O observador é obrigatório."));
+    }
+
+    public void removerObservador(ObservadorMatricula observador) {
+        observadores.remove(observador);
+    }
+
     public void concluirCurso() {
         if (status == Status.EM_ANDAMENTO) {
             dataConclusao = LocalDate.now();
             status = Status.CONCLUIDA;
+            notificarObservadores();
+        }
+    }
+
+    private void notificarObservadores() {
+        for (ObservadorMatricula observador : List.copyOf(observadores)) {
+            observador.matriculaConcluida(this);
         }
     }
 }

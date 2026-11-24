@@ -20,4 +20,12 @@ class CursoTest {
         assertThrows(IllegalArgumentException.class,
                 () -> new Curso("Java", "Fundamentos da linguagem", 0));
     }
+
+    @Test
+    void rejeitaNomeOuDescricaoVazio() {
+        assertThrows(IllegalArgumentException.class,
+                () -> new Curso(" ", "Fundamentos da linguagem", 40));
+        assertThrows(IllegalArgumentException.class,
+                () -> new Curso("Java", null, 40));
+    }
 }

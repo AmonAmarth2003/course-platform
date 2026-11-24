@@ -1,1 +1,11 @@
+br\edu\satc\CriadorCertificadoConclusao.class
+br\edu\satc\Aluno.class
+br\edu\satc\CriadorCertificado.class
+br\edu\satc\Certificado.class
 br\edu\satc\App.class
+br\edu\satc\Matricula$Status.class
+br\edu\satc\ObservadorMatricula.class
+br\edu\satc\Curso.class
+br\edu\satc\CertificadoConclusao.class
+br\edu\satc\Matricula.class
+br\edu\satc\NotificadorAluno.class
