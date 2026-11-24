@@ -15,6 +15,7 @@ public class App {
         System.out.println("Matrícula criada: " + matricula.getStatus());
         System.out.println("Data da matrícula: " + matricula.getDataMatricula());
 
+        matricula.adicionarObservador(new NotificadorAluno());
         matricula.concluirCurso();
         System.out.println("Após a conclusão: " + matricula.getStatus());
         System.out.println("Data da conclusão: " + matricula.getDataConclusao());

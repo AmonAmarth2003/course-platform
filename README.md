@@ -6,7 +6,7 @@ Divisão de contribuições informada pela equipe para a Parte 1:
 | --- | --- | --- |
 | William Manoel Bitencourt Mesquita | `feat: implementar fluxo de matrícula` | Criar `Curso`, `Aluno` e `Matricula` e implementar o fluxo básico de matrícula e conclusão. |
 | João Vitor | `feat: emitir certificado com Factory Method` | Implementar o Factory Method para criar e emitir o certificado de conclusão, preparando a inclusão de outro tipo de certificado na Parte 2. |
-| André Luiz Oenning | `feat: notificar aluno com Observer` | Implementar Observer para notificar o aluno quando a matrícula for concluída. |
+| André Luiz Oenning | `feat: notificar aluno com Observer` | Implementar o Observer para notificar o aluno quando a matrícula for concluída, incluindo registro, remoção e emissão do evento. |
 | Leonardo Da Cruz Ramos | `feat: integrar fluxo e documentar aplicação` | Integrar o fluxo executável, documentar execução, exemplos, patterns e contribuições no README. |
 
 # Plataforma de cursos
@@ -48,7 +48,7 @@ As datas de matrícula e conclusão são exibidas no formato `AAAA-MM-DD`. A dat
 
 ## Patterns
 
-Os dois patterns definidos para o projeto são Factory Method e Observer. Nesta etapa, o Factory Method para emissão de certificados já está implementado; o Observer segue previsto para a próxima entrega.
+Os dois patterns definidos para o projeto são Factory Method e Observer. Nesta etapa, ambos estão implementados.
 
 ### Factory Method — emissão de certificado
 
@@ -58,7 +58,8 @@ Os dois patterns definidos para o projeto são Factory Method e Observer. Nesta 
 ### Observer — notificação de conclusão
 
 - **Problema resolvido:** notificar o aluno quando a matrícula for concluída sem acoplar a regra da matrícula diretamente a cada canal de notificação; isso permite adicionar outra notificação na Parte 2.
-- **Classes previstas:** `ObservadorMatricula` (observador), `NotificadorAluno` (observador concreto) e `Matricula` (origem do evento de conclusão).
+- **Classes implementadas:** `ObservadorMatricula` (observador), `NotificadorAluno` (observador concreto) e `Matricula` (origem do evento de conclusão).
+- **Comportamento:** ao concluir uma matrícula pela primeira vez, `Matricula` notifica todos os observadores registrados. Concluir novamente não gera uma nova notificação.
 
 ## Testes
 
