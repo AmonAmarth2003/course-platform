@@ -4,10 +4,10 @@ Divisão de contribuições informada pela equipe para a Parte 1:
 
 | Integrante | PR sugerido | Contribuição |
 | --- | --- | --- |
-| William Manoel Bitencourt Mesquita | `feat: implementar fluxo de matrícula` | Criar `Curso`, `Aluno` e `Matricula` e implementar o fluxo básico de matrícula e conclusão. |
-| João Vitor | `feat: emitir certificado com Factory Method` | Implementar o Factory Method para criar e emitir o certificado de conclusão, preparando a inclusão de outro tipo de certificado na Parte 2. |
+| João Vitor Oliveira | `feat: implementar fluxo de matrícula` | Criar `Curso`, `Aluno` e `Matricula` e implementar o fluxo básico de matrícula e conclusão. |
+| Leonardo Da Cruz Ramos | `feat: emitir certificado com Factory Method` | Implementar o Factory Method para criar e emitir o certificado de conclusão, preparando a inclusão de outro tipo de certificado na Parte 2. |
 | André Luiz Oenning | `feat: notificar aluno com Observer` | Implementar o Observer para notificar o aluno quando a matrícula for concluída, incluindo registro, remoção e emissão do evento. |
-| Leonardo Da Cruz Ramos | `feat: integrar fluxo e documentar aplicação` | Integrar o fluxo executável, documentar execução, exemplos, patterns e contribuições no README. |
+| Manoel Bitencourt Mesquita | `feat: integrar fluxo e documentar aplicação` | Integrar o fluxo executável, documentar execução, exemplos, patterns e contribuições no README. |
 
 # Plataforma de cursos
 
